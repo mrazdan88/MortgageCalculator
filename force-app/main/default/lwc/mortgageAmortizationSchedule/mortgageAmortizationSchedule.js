@@ -48,13 +48,17 @@ export default class MortgageAmortizationSchedule extends LightningElement {
         for (let y = 1; y <= this.years; y++) { 
             let interestY = 0;
             let principalY = 0;
-            for (let m = 0; m <12; m++) {
+            /*for (let m = 0; m <12; m++) {
                 const interestM = balance * monthlyRate;
                 const principalM = this.monthlyPayment - interestM;
                 interestY += interestM;
                 principalY += principalM;
                 balance -= principalM;
-            }
+            }*/
+            interestY = balance * monthlyRate;
+            principalY = this.monthlyPayment - interestY;
+            balance -= principalY;
+            
             const cssPrincipal = 'flex:' + principalY + ';-webkit-flex:' + principalY + ';';
             const cssInterest = 'flex:' + interestY + ';-webhit-flex:' + interestY + ';';
             amortization.push({
