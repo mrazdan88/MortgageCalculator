@@ -46,12 +46,13 @@ export default class MortgageAmortizationSchedule extends LightningElement {
         let balance = this.principal;
         const amortization = [];
         let installmentNumber = 0;
+        //Years will not have tenure so there is no need run 2 loops
         for (let y = 1; y <= this.years; y++) { 
             let interestY = 0;
             let principalY = 0;
             let interestM = 0;
             let principalM = 0;
-            for (let m = 0; m <12; m++) {
+            //for (let m = 0; m <12; m++) {
                 interestM = balance * monthlyRate;
                 principalM = this.monthlyPayment - interestM;
                 interestY += interestM;
@@ -69,7 +70,7 @@ export default class MortgageAmortizationSchedule extends LightningElement {
                 interestY: Math.round(interestM),
                 balance: Math.round(balance)
             });
-            }
+            //}
         }
         this.amortization = amortization;
         
