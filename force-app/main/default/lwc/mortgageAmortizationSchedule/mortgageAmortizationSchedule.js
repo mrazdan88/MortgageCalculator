@@ -57,7 +57,7 @@ export default class MortgageAmortizationSchedule extends LightningElement {
                 interestY += interestM;
                 principalY += principalM;
                 balance -= principalM;
-                installment++;
+                installmentNumber++;
             
             
             const cssPrincipal = 'flex:' + principalY + ';-webkit-flex:' + principalY + ';';
