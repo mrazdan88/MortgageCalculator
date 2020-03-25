@@ -45,7 +45,7 @@ export default class MortgageAmortizationSchedule extends LightningElement {
         const monthlyRate = this.rate / 100/12;
         let balance = this.principal;
         const amortization = [];
-        const installment = 0;
+        let installmentNumber = 0;
         for (let y = 1; y <= this.years; y++) { 
             let interestY = 0;
             let principalY = 0;
@@ -63,7 +63,7 @@ export default class MortgageAmortizationSchedule extends LightningElement {
             const cssPrincipal = 'flex:' + principalY + ';-webkit-flex:' + principalY + ';';
             const cssInterest = 'flex:' + interestY + ';-webhit-flex:' + interestY + ';';
             amortization.push({
-                id: installment, 
+                id: installmentNumber, 
                 cssClasses: {principal: cssPrincipal, interest:cssInterest},
                 principalY: Math.round(principalM),
                 interestY: Math.round(interestM),
