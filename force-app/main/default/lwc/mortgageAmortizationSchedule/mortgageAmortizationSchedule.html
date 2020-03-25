@@ -4,7 +4,7 @@
             <div class="input">
                 <lightning-layout vertical-align="end">
                     <lightning-layout-item>
-                        Principal: <lightning-formatted-number value={defaultPrincipal} format-style="currency" currency-code="USD"></lightning-formatted-number>
+                        Principal: <lightning-formatted-number value={defaultPrincipal} format-style="currency" currency-code="INR"></lightning-formatted-number>
                     </lightning-layout-item>
                     <lightning-layout-item padding="horizontal-small">
                         Years: <lightning-formatted-number value={defaultYears} format-style="decimal"></lightning-formatted-number>
@@ -16,7 +16,7 @@
                 <lightning-layout class="slds-clearfix">
                     <lightning-layout-item class="slds-float_left">
                             <div class="result">
-                                    Monthly Payment: <lightning-formatted-number value={monthlyPayment} format-style="currency" currency-code="USD"></lightning-formatted-number>
+                                    Monthly Payment: <lightning-formatted-number value={monthlyPayment} format-style="currency" currency-code="INR"></lightning-formatted-number>
                                 </div>
                     </lightning-layout-item>
                     <lightning-layout-item flexibility="grow"></lightning-layout-item>
@@ -43,7 +43,7 @@
             <table class="slds-table  slds-no-row-hover slds-table_bordered slds-table_col-bordered ">
                 <thead>
                     <tr>
-                        <th>Year</th>
+                        <th>Installment No:</th>
                         <th class="principal">Principal</th>
                         <th class="stretch slds-show_medium"></th>
                         <th class="interest">Interest</th>
@@ -55,7 +55,7 @@
                         <tr key={year.id}>
                             <td>{year.id}</td>
                             <td class="principal">
-                                <lightning-formatted-number value={year.principalY} format-style="currency" currency-code="USD"></lightning-formatted-number>
+                                <lightning-formatted-number value={year.principalY} format-style="currency" currency-code="INR"></lightning-formatted-number>
                             </td>
                             <td class="stretch slds-show_medium">
                                 <div class="flex">
@@ -65,10 +65,10 @@
                             </td>
                             <td class="interest ">
                                 <lightning-formatted-number value={year.interestY} format-style="currency"
-                                    currency-code="USD"></lightning-formatted-number>
+                                    currency-code="INR"></lightning-formatted-number>
                             </td>
                             <td class="slds-show_medium">
-                                <lightning-formatted-number value={year.balance} format-style="currency" currency-code="USD">
+                                <lightning-formatted-number value={year.balance} format-style="currency" currency-code="INR">
                                 </lightning-formatted-number>
                             </td>
                         </tr>
