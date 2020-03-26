@@ -1,7 +1,7 @@
 import { LightningElement, track, api} from 'lwc';
 import mortgageUtils from 'c/mortgageUtils';
 const DELAY = 300;
-export default class MortgageCalculator extends LightningElement {
+export default class MortgageCalculator1 extends LightningElement {
    @api initPrincipal;
    @api initRate;
    @api initYears;
